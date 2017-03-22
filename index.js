@@ -9,8 +9,11 @@ const logger = require("koa-logger");
 const app = new koa();
 const port = process.env.PORT || "3000";
 const http = require('http');
+//replace your ffmpeg.exe to the path
 const ffmpegPath = "D:\\Tools\\ffmpeg-20170321-db7a05d-win64-static\\bin\\ffmpeg.exe";
+//replace your ffprobe.exe to the path
 const ffprobePath = "D:\\Tools\\ffmpeg-20170321-db7a05d-win64-static\\bin\\ffprobe.exe";
+//replace your stream source to the path
 const sourcePath = "rtsp://xxx.xxxx.xxx.xxx/xx"
 
 
