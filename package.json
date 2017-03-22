@@ -1,0 +1,20 @@
+{
+  "name": "hlsstream",
+  "version": "1.0.0",
+  "description": "HLS Stream server test",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "fluent-ffmpeg": "^2.1.0",
+    "koa": "^2.2.0",
+    "koa-logger": "^2.0.1",
+    "koa-mount": "^2.0.0",
+    "koa-static": "^3.0.0",
+    "videojs-flash": "^1.0.0-RC.2"
+  }
+}

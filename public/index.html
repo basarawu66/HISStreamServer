@@ -1,0 +1,42 @@
+<html>
+
+<head>
+<link href="//vjs.zencdn.net/5.11/video-js.min.css" rel="stylesheet">
+</head>
+
+<body>
+
+    <video width="600" height="300" id="video"></video>
+    <button type="button" id="btnPlay" value="click">play</button>
+
+    <video width="640" height="400" id="video1" src="/stream/test.m3u8" controls autoplay></video>
+    <video id=example-video width=600 height=300 class="video-js vjs-default-skin" controls>
+        <source src="/stream/test.m3u8" type="application/x-mpegURL">
+    </video>
+    <script src="https://cdn.jsdelivr.net/hls.js/latest/hls.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/video.js/5.19.0/video.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/videojs-contrib-hls/5.3.3/videojs-contrib-hls.js"></script>
+    <video id="video"></video>
+    <script>
+        if (Hls.isSupported()) {
+            var video = document.getElementById('video');
+            var hls = new Hls();
+            hls.loadSource("/stream/test.m3u8");
+            hls.attachMedia(video);
+            hls.on(Hls.Events.MANIFEST_PARSED, function () {
+                video.play();
+            });
+            document.getElementById("btnPlay").onclick=function(){
+                video.play();
+            }
+        }
+
+        var player = videojs('example-video')
+        
+        player.play();
+         
+        
+    </script>
+</body>
+
+</html>
